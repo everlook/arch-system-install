@@ -17,8 +17,6 @@ unzip
 wget
 "
 
-# Oh My Zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install packages
 for p in $pkgs; do
@@ -51,6 +49,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install nerd fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+mkdir -p ~/.local/share/fonts/Hack/
 unzip Hack.zip -d ~/.local/share/fonts/Hack/
 rm Hack.zip
 fc-cache
@@ -58,8 +57,10 @@ fc-cache
 # Install pynvim for neovim
 pip install pynvim
 
-# launch nvim and run PlugInstall
-
 # tmux theme
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+# Oh My Zsh. We get a new shell so install last
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# launch nvim and run PlugInstall
