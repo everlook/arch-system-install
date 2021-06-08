@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# This assumes Oh My Zsh is installed
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 go_version=1.16.5
 node_version=14.17.0
 
@@ -15,8 +18,8 @@ tmux
 tree
 unzip
 wget
+ctags
 "
-
 
 # install packages
 for p in $pkgs; do
@@ -25,13 +28,13 @@ done
 
 # clone configs
 git clone https://github.com/everlook/configs.git
-cp configs/.zshrc .zshrc
-cp configs/.tmux.conf .tmux.conf
-cp configs/.gitconfig .
+cp $HOME/configs/.zshrc $HOME/.zshrc
+cp $HOME/configs/.tmux.conf $HOME/.tmux.conf
+cp $HOME/configs/.gitconfig $HOME/
 
 # neovim
-mkdir -p .config
-cp -r configs/nvim .config/
+mkdir -p $HOME/.config
+cp -r $HOME/configs/nvim $HOME/.config/
 
 # Golang
 wget https://golang.org/dl/go${go_version}.linux-amd64.tar.gz
@@ -49,8 +52,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install nerd fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
-mkdir -p ~/.local/share/fonts/Hack/
-unzip Hack.zip -d ~/.local/share/fonts/Hack/
+mkdir -p $HOME/.local/share/fonts/Hack/
+unzip Hack.zip -d $HOME/.local/share/fonts/Hack/
 rm Hack.zip
 fc-cache
 
@@ -60,7 +63,5 @@ pip install pynvim
 # tmux theme
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Oh My Zsh. We get a new shell so install last
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # launch nvim and run PlugInstall
+echo "source ~/.zshrc to continue"
