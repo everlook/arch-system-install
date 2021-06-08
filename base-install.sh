@@ -19,6 +19,7 @@ tree
 unzip
 wget
 ctags
+neofetch
 "
 
 # install packages
