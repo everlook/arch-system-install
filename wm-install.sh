@@ -12,6 +12,7 @@ nitrogen
 xfce4-terminal
 arandr
 rofi
+alacritty
 "
 # install packages
 for p in $pkgs; do
@@ -21,6 +22,8 @@ done
 # this assumes base-install was run
 cp -r $HOME/configs/sxhkd $HOME/.config/
 cp -r $HOME/configs/bspwm $HOME/.config/
+cp -r $HOME/configs/alacritty $HOME/.config/
+cp -r $HOME/configs/xinitrc $HOME/.xinitrc
 
 # install yay
 git clone https://aur.archlinux.org/yay.git
