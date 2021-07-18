@@ -13,6 +13,12 @@ xfce4-terminal
 arandr
 rofi
 alacritty
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+lxappearance
+materia-gtk-theme
+pcmanfm
 "
 # install packages
 for p in $pkgs; do
@@ -33,3 +39,5 @@ rm -rf yay
 
 yay -S polybar
 cp -r $HOME/configs/polybar $HOME/.config/
+
+yay nordic-theme
