@@ -19,6 +19,7 @@ pulseaudio-alsa
 lxappearance
 materia-gtk-theme
 pcmanfm
+ttf-ubuntu-font-family
 "
 # install packages
 for p in $pkgs; do
