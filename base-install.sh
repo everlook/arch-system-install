@@ -29,9 +29,9 @@ done
 
 # clone configs
 git clone https://github.com/everlook/configs.git
-cp $HOME/configs/.zshrc $HOME/.zshrc
-cp $HOME/configs/.tmux.conf $HOME/.tmux.conf
-cp $HOME/configs/.gitconfig $HOME/
+cp $HOME/configs/zshrc $HOME/.zshrc
+cp $HOME/configs/tmux.conf $HOME/.tmux.conf
+cp $HOME/configs/gitconfig $HOME/
 
 # neovim
 mkdir -p $HOME/.config
