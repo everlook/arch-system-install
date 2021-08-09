@@ -42,3 +42,4 @@ yay -S polybar
 cp -r $HOME/configs/polybar $HOME/.config/
 
 yay nordic-theme
+yay pcloud-drive
