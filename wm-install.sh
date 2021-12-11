@@ -7,7 +7,6 @@ bspwm
 picom
 dmenu
 sxhkd
-chromium
 nitrogen
 xfce4-terminal
 arandr
@@ -20,6 +19,8 @@ lxappearance
 materia-gtk-theme
 pcmanfm
 ttf-ubuntu-font-family
+dunst
+evince-no-gnome
 "
 # install packages
 for p in $pkgs; do
