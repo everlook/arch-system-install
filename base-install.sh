@@ -56,6 +56,12 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
 mkdir -p $HOME/.local/share/fonts/Hack/
 unzip Hack.zip -d $HOME/.local/share/fonts/Hack/
 rm Hack.zip
+
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+mkdir -p $HOME/.local/share/fonts/JetBrainsMono/
+unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/JetBrainsMono/
+rm JetBrainsMono.zip
+
 fc-cache
 
 # Install pynvim for neovim
