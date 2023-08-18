@@ -3,8 +3,8 @@
 # This assumes Oh My Zsh is installed
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-go_version=1.16.5
-node_version=14.17.0
+go_version=1.20.7
+node_version=18.17.1
 
 pkgs="
 clang
@@ -12,7 +12,6 @@ fzf
 htop
 neovim
 python-pip
-qemu
 ripgrep
 tmux
 tree
@@ -20,6 +19,7 @@ unzip
 wget
 ctags
 neofetch
+cmake
 "
 
 # install packages
@@ -31,7 +31,7 @@ done
 git clone https://github.com/everlook/configs.git
 cp $HOME/configs/zshrc $HOME/.zshrc
 cp $HOME/configs/tmux.conf $HOME/.tmux.conf
-cp $HOME/configs/gitconfig $HOME/
+cp $HOME/configs/gitconfig $HOME/.gitconfig
 
 # neovim
 mkdir -p $HOME/.config
