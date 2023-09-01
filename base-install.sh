@@ -5,6 +5,7 @@
 
 go_version=1.20.7
 node_version=18.17.1
+nerd_font_version=v3.0.2
 
 pkgs="
 clang
@@ -19,6 +20,7 @@ unzip
 wget
 ctags
 neofetch
+noto-fonts-emoji
 cmake
 "
 
@@ -52,12 +54,12 @@ rm node-v${node_version}-linux-x64.tar.xz
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # Install nerd fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/${nerd_font_version}/Hack.zip
 mkdir -p $HOME/.local/share/fonts/Hack/
 unzip Hack.zip -d $HOME/.local/share/fonts/Hack/
 rm Hack.zip
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/${nerd_font_version}/JetBrainsMono.zip
 mkdir -p $HOME/.local/share/fonts/JetBrainsMono/
 unzip JetBrainsMono.zip -d $HOME/.local/share/fonts/JetBrainsMono/
 rm JetBrainsMono.zip

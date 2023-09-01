@@ -1,37 +1,31 @@
 #!/bin/bash
 
 pkgs="
-xorg
-xorg-xinit
-bspwm
-picom
-dmenu
-sxhkd
-nitrogen
-xfce4-terminal
-arandr
-rofi
+awesome
+awesome-extra
 alacritty
+alsa-utils
+arandr
+dmenu
+lxappearance
+i3lock-fancy
+materia-theme
+nitrogen
+network-manager-applet
+papirus-icon-theme
 pavucontrol
 pulseaudio
 pulseaudio-alsa
-lxappearance
-materia-gtk-theme
+picom
+pnmixer
+polkit-gnome
+rofi
 pcmanfm
-ttf-ubuntu-font-family
 dunst
-evince-no-gnome
+xclip
+xorg
+xorg-xinit
 "
-# install packages
-for p in $pkgs; do
-  sudo pacman -S --noconfirm $p
-done
-
-# this assumes base-install was run
-cp -r $HOME/configs/sxhkd $HOME/.config/
-cp -r $HOME/configs/bspwm $HOME/.config/
-cp -r $HOME/configs/alacritty $HOME/.config/
-cp -r $HOME/configs/xinitrc $HOME/.xinitrc
 
 # install yay
 git clone https://aur.archlinux.org/yay.git
@@ -39,8 +33,7 @@ cd yay && makepkg -si
 cd $HOME
 rm -rf yay
 
-yay -S polybar
-cp -r $HOME/configs/polybar $HOME/.config/
-
-yay nordic-theme
-yay pcloud-drive
+# install packages
+for p in $pkgs; do
+   yay -S --noconfirm $p
+done
